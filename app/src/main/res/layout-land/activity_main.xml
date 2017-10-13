@@ -305,7 +305,6 @@
                 android:fontFamily="monospace"
                 android:gravity="center_vertical"
                 android:paddingLeft="20dp"
-
                 android:layout_rowWeight="2"
                 android:layout_gravity="fill"
                 android:text=""
