@@ -6,5 +6,8 @@
     <color name="nombre">#EEEEEE</color>
     <color name="ope">#FFD54F</color>
     <color name="special">#BDBDBD</color>
+    <color name="white">#FAFAFA</color>
+    <color name="dark">#424242</color>
+    <color name="darkGreen">#757575</color>
 
 </resources>

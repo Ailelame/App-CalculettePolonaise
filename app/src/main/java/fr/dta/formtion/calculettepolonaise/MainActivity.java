@@ -1,6 +1,6 @@
 package fr.dta.formtion.calculettepolonaise;
 
-import android.content.DialogInterface;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -174,10 +175,17 @@ public class MainActivity extends AppCompatActivity {
                 updateListView();
             }
             if(input.equals("/")){
-                int result = this.stackCalculette.get(this.stackCalculette.size()-1) / this.stackCalculette.get(this.stackCalculette.size()-2);
-                this.stackCalculette.remove(this.stackCalculette.size()-2);
-                this.stackCalculette.set(this.stackCalculette.size()-1,result);
-                updateListView();
+                if( this.stackCalculette.get(stackCalculette.size()-2)!=0  &&  this.stackCalculette.get(stackCalculette.size()-1)!=0  ){
+                    Log.d("Valeurs","Les valeurs à calculer sont : "+this.stackCalculette.get(stackCalculette.size()-2) + " et "+this.stackCalculette.get(stackCalculette.size()-1));
+                    int result = this.stackCalculette.get(this.stackCalculette.size()-1) / this.stackCalculette.get(this.stackCalculette.size()-2);
+                    this.stackCalculette.remove(this.stackCalculette.size()-2);
+                    this.stackCalculette.set(this.stackCalculette.size()-1,result);
+                    updateListView();
+                }else{
+
+                    Toast.makeText(this, "Attention, on ne divise pas par 0", Toast.LENGTH_SHORT).show();
+                }
+
             }
         }
     }
@@ -231,4 +239,18 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        this.stackCalculette=savedInstanceState.getIntegerArrayList("stack");
+        updateListView();
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putIntegerArrayList("stack", (ArrayList<Integer>) this.stackCalculette);
+    }
 }

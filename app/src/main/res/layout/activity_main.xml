@@ -13,6 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_weight="1"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:background="@color/darkGreen"
         />
 
     <TextView
@@ -22,115 +25,155 @@
         android:layout_weight="1"
         android:textSize="25sp"
         android:paddingLeft="20dp"
-        android:text="" />
+        android:gravity="center_vertical"
+        android:text=""
+        android:background="@color/white"
+        android:textColor="@color/dark"/>
 
     <GridLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:columnCount="4"
-        android:layout_weight="1"
         >
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="1"
             android:text="1" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="2"
             android:text="2" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="3"
             android:text="3" />
 
         <Button
             android:id="@+id/buttonPlus"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/ope"
+            android:textColor="@color/dark"
             android:tag="+"
             android:text="+" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="4"
             android:text="4" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="5"
             android:text="5" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="6"
             android:text="6" />
 
         <Button
             android:id="@+id/buttonMinus"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/ope"
+            android:textColor="@color/dark"
             android:tag="-"
             android:text="-" />
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="7"
             android:text="7" />
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="8"
             android:text="8" />
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="9"
             android:text="9" />
 
         <Button
             android:id="@+id/buttonDivided"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/ope"
+            android:textColor="@color/dark"
             android:tag="/"
             android:text="/" />
 
         <Button
             android:id="@+id/buttonRandom"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/special"
             android:tag="random"
@@ -138,15 +181,20 @@
 
         <Button
             android:id="@+id/button0"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/nombre"
+            android:textColor="@color/dark"
             android:tag="0"
             android:text="0" />
 
         <Button
             android:id="@+id/buttonClear"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/special"
             android:tag="clear"
@@ -154,15 +202,20 @@
 
         <Button
             android:id="@+id/buttonMulti"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/ope"
+            android:textColor="@color/dark"
             android:tag="*"
             android:text="*" />
 
         <Button
             android:id="@+id/buttonPop"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/special"
             android:tag="pop"
@@ -170,7 +223,9 @@
 
         <Button
             android:id="@+id/buttonSwap"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
             android:background="@color/special"
             android:tag="swap"
@@ -178,10 +233,12 @@
 
         <Button
             android:id="@+id/buttonEnter"
-            android:layout_width="174dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
             android:background="@color/colorAccent"
+            android:layout_columnSpan="2"
             android:tag="enter"
             android:text="Enter" />
 
