@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // Display the number hit by the user in the input view
     private void addNumber() {
+
         String num = this.inputView.getText().toString();
         int number = Integer.parseInt(num);
         this.stackCalculette.add(number);
@@ -201,9 +202,13 @@ public class MainActivity extends AppCompatActivity {
             String number = this.inputView.getText().toString();
 
             if(!number.equals("")){
+                if(number.length()>9){
+                    Toast.makeText(this, "Come on men, be serious! You ain't Cresus", Toast.LENGTH_SHORT).show();
+                }
                 addNumber();
                 displayStack();
             }
+
         }
         if(input.equals("pop")){
             if(stackCalculette.size()!=0){
